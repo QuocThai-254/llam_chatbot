@@ -27,7 +27,7 @@ with st.sidebar:
         llm = 'meta/llama-2-7b-chat:13c3cdee13ee059ab779f0291d29054dab00a47dad8261375654de5540165fb0'
     temperature = st.sidebar.slider('temperature', min_value=0.01, max_value=5.0, value=0.1, step=0.01)
     top_p = st.sidebar.slider('top_p', min_value=0.01, max_value=1.0, value=0.9, step=0.01)
-    max_length = st.sidebar.slider('max_length', min_value=32, max_value=128, value=120, step=8)
+    max_length = st.number_input(placeholder = "Insert max length for the response...", min_value = 32)
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
