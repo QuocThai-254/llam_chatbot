@@ -70,6 +70,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             response = generate_llama2_response(prompt)
             placeholder = st.empty()
             full_response = ''
+            print(response)
             for item in response:
                 full_response += item
                 placeholder.markdown(full_response)
